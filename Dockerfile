@@ -5,7 +5,7 @@ FROM nginx:alpine
 WORKDIR /usr/share/nginx/html
 
 # Copy the HTML files to the container
-COPY ./www /usr/share/nginx/html
+curl https://raw.githubusercontent.com/TeroKeso/sdtDocker/main/www/index.html -O
 
 # Start Nginx web server
 CMD ["nginx", "-g", "daemon off;"]
